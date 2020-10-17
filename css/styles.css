@@ -1,14 +1,29 @@
 body {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Lato', serif;
     /* Background pattern from Toptal Subtle Patterns */
     background: #fffada url("../img/broken-noise.jpg") repeat;
     color: #29271b;
     margin: 3rem 0;
+    font-size: 18px;
+    text-align: justify;
 }
 
 header,
 section {
     margin-bottom: 3rem;
+}
+
+.container {
+    margin-bottom: 6rem;
+}
+
+.name {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.name h1 {
+    font-size: 3em;
 }
 
 #heroImage {
@@ -20,6 +35,14 @@ section {
     margin-bottom: 3rem;
 }
 
+.parallelogram {
+	width: 100px;
+	height: 25px;
+	transform: skew(-30deg);
+    background: #6d485b;
+    margin: 2em auto 2em auto;
+}
+
 /* Remove dotted outline after switching focus. */
 section:focus {
     outline: none;
@@ -28,15 +51,16 @@ section:focus {
 h1,
 h2,
 h3 {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Rufina', sans-serif;
     color: #6d485b;
 }
 
 nav .button {
     border: 0;
-    border-left: 4px solid #83d0bf;
+    border-bottom: 4px solid #83d0bf;
     border-radius: 0;
-    background-color: rgba(208, 225, 191, 0.53);
+    /* background-color: rgba(208, 225, 191, 0.53); */
+    width: 100%;
 }
 
 #myBtn {
@@ -51,8 +75,16 @@ nav .button {
     z-index: 99;
     /* Text color */
     cursor: pointer;
-    background-color: #d0e1bf;
+    background-color: rgba(131, 208, 191, 0.8);
+    border: none;
+    border-bottom: 4px solid #83d0bf;
     border-radius: 0;
+    font-family: 'Lato', serif;
+    color: #29271b;
+}
+
+#myBtn:hover {
+    border-color: #888;
 }
 
 #about img {
@@ -62,7 +94,21 @@ nav .button {
 @media (max-width: 976px) {
     #about img {
         float: none;
+        display: block;
+        margin: 0 auto;
     }
+
+    .name h1 {
+        font-size: 2em;
+    }
+
+    .container h3 {
+        font-size: 1.9rem;
+        letter-spacing: 0.2em;
+        font-weight: 600;
+        text-align: left;
+    }
+    
 }
 
 a img {
@@ -78,16 +124,32 @@ a img:hover {
     margin-bottom: 4em;
 }
 
+.footer {
+    color: #777;
+    font-size: 11px;
+    font-family: 'Lato', serif;
+    text-align: center;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer a:link,
+.footer a:visited {
+    color: #777;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #4d8c7e;
+    text-decoration: none;
+}
+
 /* Begin Skeleton overrides */
 h1 {
     font-weight: 600;
     letter-spacing: 0.8rem;
     text-transform: uppercase;
     font-size: 3rem;
-}
-
-h2 {
-    font-size: 3.2rem;
 }
 
 h3 {
@@ -102,6 +164,7 @@ h4 {
     font-weight: 600;
     text-transform: uppercase;
     color: #444;
+    margin-bottom: 0.2em;
 }
 
 section a:link,
